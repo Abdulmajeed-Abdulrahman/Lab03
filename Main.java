@@ -6,7 +6,7 @@ public class Main {
         System.out.println("Original Array:");
         printArray(arr);
 
-        insertionSort(arr);
+        sort(arr);
 
         System.out.println("Sorted Array:");
         printArray(arr);
@@ -49,7 +49,15 @@ public class Main {
         System.out.println();
     }
     public static void sort(int[] a){
-        insertionSort(a);
+        Scanner input = new Scanner(System.in);
+        int n =input.nextInt();
+        System.out.println("Chose 1 for selectionSort or 2 for insertionSort");
+        if (n==1)
+            selectionSort(a);
+        else if (n==2)
+            insertionSort(a);
+        else
+            System.out.println("Wrong input");
     }
 }
 
